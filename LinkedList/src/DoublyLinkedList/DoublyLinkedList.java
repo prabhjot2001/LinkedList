@@ -42,6 +42,12 @@ public class DoublyLinkedList <T>{
             size++;
         }
     }
+   
+
+    private void printDeleteMsg(String name)
+    {
+        System.out.println("Removed "+ name+ " from contacts successfully 😎");
+    }
 
     public void addLast(T data, String name)
     {
@@ -73,7 +79,7 @@ public class DoublyLinkedList <T>{
                 head = null;
                 tail = null;
                 size--;
-                System.out.println("Removed "+ name+ " from contacts successfully 😎");
+                printDeleteMsg(name);
                 return;
             }
             else if(it==head)
@@ -82,7 +88,7 @@ public class DoublyLinkedList <T>{
                 head = it.next;
                 head.prev = null;
                 size--;
-                System.out.println("Removed "+ name+ " from contacts successfully 😎");
+                printDeleteMsg(name);
                 return;
             }
             else if(it == tail)
@@ -90,7 +96,7 @@ public class DoublyLinkedList <T>{
                 tail = it.prev;
                 tail.next = null;
                 size--;
-                 System.out.println("Removed "+ name+ " from contacts successfully 😎");
+                 printDeleteMsg(name);
                  return;
             }
             else{
@@ -98,7 +104,7 @@ public class DoublyLinkedList <T>{
                it.prev.next = it.next ;
                it.next.prev = it.prev; 
                size--;
-                System.out.println("Removed "+ name+ " from contacts successfully 😎");
+                printDeleteMsg(name);
                return;
             }
         }
