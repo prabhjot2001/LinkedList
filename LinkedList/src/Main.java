@@ -1,3 +1,4 @@
+import DoublyLinkedList.DoublyLinkedList;
 import SinglyLinkedList.SinglyList;
 
 public class Main {
@@ -66,6 +67,21 @@ public class Main {
 
         list.getSize();
         list.printList();
+
+
+
+
+
+        DoublyLinkedList<Long> dll = new DoublyLinkedList<Long>();
+        dll.addFirst(9115266L,"user2");
+        dll.addFirst(9869L,"user3");
+        dll.addFirst(94570L,"user6");
+
+        dll.addLast(12343242L , "user1");
+        dll.Total_Contacts();
+
+        dll.printList();
+        dll.traverseBackward();
 
     }
 }
